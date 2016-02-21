@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'twitter_bootstrap',
     'web'
 ]
 
@@ -54,14 +53,13 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'quiqueypatrysecasan.urls'
 
-PROJECT_DIR = os.path.abspath(os.path.dirname(__file__)) #/boda/quiqueypatrysecasan/quiqueypatrysecasan
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
                     os.path.join(PROJECT_DIR, 'templates').replace('\\', '//'),
-                    os.path.join(PROJECT_DIR, 'static').replace('\\', '//'),
                 ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -121,7 +119,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL  = '/media/'
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static/').replace('\\', '//')
-MEDIA_ROOT  = os.path.join(PROJECT_DIR, 'media/').replace('\\', '//')
-
-print(STATIC_ROOT)
+STATIC_ROOT = '/home/quique/proyectos/boda/quiqueypatrysecasan/web/static/'
+MEDIA_ROOT  = os.path.join(PROJECT_DIR, 'media').replace('\\', '//')
