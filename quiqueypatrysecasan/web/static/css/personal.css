@@ -1,0 +1,54 @@
+/*
+PERSONAL CSS
+*/
+
+.main-color {
+    color: #736C74;
+    background-color: #F2E5E2;
+
+}
+
+.fa-bg {
+    color: white;
+}
+
+.fa-color {
+    /*#E1D3C8*/
+    color: #736C74;
+}
+
+.ceremonia {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(../img/la-ceremonia.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.banquete {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(../img/el-banquete.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.fiesta {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: url(../img/la-fiesta.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
