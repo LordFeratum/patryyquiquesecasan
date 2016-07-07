@@ -1,6 +1,8 @@
-from django.shortcuts import render
-from django.shortcuts import render_to_response
+from django.views.generic import FormView
+
+from web.forms import UserForm
 
 
-def home(request):
-    return render_to_response('index.html', locals())
+class Home(FormView):
+    template_name = 'index.html'
+    form_class    = UserForm
