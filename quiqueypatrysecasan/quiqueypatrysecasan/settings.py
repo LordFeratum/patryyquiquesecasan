@@ -75,16 +75,17 @@ TEMPLATES = [
     },
 ]
 
+print("TEMPLATES: ", TEMPLATES[0]['DIRS'][0])
+
 WSGI_APPLICATION = 'quiqueypatrysecasan.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'db',
+        'NAME': 'db_db',
+        'USER': 'db_user',
+        'PASSWORD': 'db_pwd'
     }
 }
 
@@ -121,5 +122,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL  = '/media/'
 
-STATIC_ROOT = '/home/quique/proyectos/boda/quiqueypatrysecasan/web/static/'
+# STATIC_ROOT = '/home/quique/proyectos/boda/quiqueypatrysecasan/web/static/'
+# STATIC_ROOT = os.path.join(PROJECT_DIR, 'web/static/').replace('\\', '//')
+
+STATIC_ROOT = '/opt/web/'
+
+for element in os.listdir('/opt/web/static'):
+    print(element)
+
 MEDIA_ROOT  = os.path.join(PROJECT_DIR, 'media').replace('\\', '//')

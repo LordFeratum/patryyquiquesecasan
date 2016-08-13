@@ -1,0 +1,36 @@
+version: '2'
+services:
+  web:
+    build: .
+#    command: python quiqueypatrysecasan/manage.py runserver localhost:9000
+    command: gunicorn quiqueypatrysecasan.wsgi:application -w 2 -b :9000
+    environment:
+      - TZ=Europe/Madrid
+    links:
+      - db
+    ports:
+      - $EXPOSE_IP:11080:9000
+    volumes:
+      - .:/opt/:rw
+    networks:
+      - db-net
+      - service-grp-net
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=db_pwd
+      - POSTGRES_USER=db_user
+      - POSTGRES_DB=db_db
+    volumes:
+      - db-data:/var/lib/postgres/data
+    networks:
+      - db-net
+
+networks:
+  db-net: {}
+  service-grp-net:
+    external: true
+
+volumes:
+  db-data: {}
