@@ -17,6 +17,14 @@ PERSONAL CSS
     color: #736C74;
 }
 
+.modal-dialog {
+    width:600px;
+}
+
+.thumbnail {
+    margin-bottom:6px;
+}
+
 .ceremonia {
     display: table;
     width: 100%;

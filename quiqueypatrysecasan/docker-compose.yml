@@ -2,16 +2,17 @@ version: '2'
 services:
   web:
     build: .
-#    command: python quiqueypatrysecasan/manage.py runserver localhost:9000
-    command: gunicorn quiqueypatrysecasan.wsgi:application -w 2 -b :9000
+    command: python manage.py runserver 0.0.0.0:9000
     environment:
       - TZ=Europe/Madrid
+      - CLOUDINARY_URL=cloudinary://131131783311296:hYbwcfxv1reh3k8tn84OwcaqjCM@boda
     links:
       - db
     ports:
       - $EXPOSE_IP:11080:9000
     volumes:
       - .:/opt/:rw
+      - /opt/static
     networks:
       - db-net
       - service-grp-net

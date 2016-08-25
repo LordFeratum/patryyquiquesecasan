@@ -17,8 +17,10 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from web.views import Home
+from web.views import Gallery
 
 urlpatterns = [
     url(r'^$', Home.as_view()),
+    url(r'^gallery', Gallery.as_view()),
     url(r'^admin/', admin.site.urls),
 ]

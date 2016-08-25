@@ -25,6 +25,8 @@ SECRET_KEY = '%=3$z^nb7qcii4*)z(5*vc+-v3%yu+)@sw9&$!i+j3$kqs#)v$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+APPEND_SLASH = True
+
 ALLOWED_HOSTS = ['*']
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -39,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
-    'web'
+    'web',
+    'cloudinary'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -74,8 +77,6 @@ TEMPLATES = [
         },
     },
 ]
-
-print("TEMPLATES: ", TEMPLATES[0]['DIRS'][0])
 
 WSGI_APPLICATION = 'quiqueypatrysecasan.wsgi.application'
 
@@ -122,12 +123,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL  = '/media/'
 
-# STATIC_ROOT = '/home/quique/proyectos/boda/quiqueypatrysecasan/web/static/'
-# STATIC_ROOT = os.path.join(PROJECT_DIR, 'web/static/').replace('\\', '//')
+STATIC_ROOT = '/opt/static'
 
-STATIC_ROOT = '/opt/web/'
-
-for element in os.listdir('/opt/web/static'):
-    print(element)
-
-MEDIA_ROOT  = os.path.join(PROJECT_DIR, 'media').replace('\\', '//')
+STATICFILES_DIR = [
+    '/opt/static'
+]

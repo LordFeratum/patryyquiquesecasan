@@ -4,33 +4,72 @@
 
 <!-- Header -->
 <header id="top" class="header">
-    <div class="text-vertical-center">
-        <h1>Patri Y Quique</h1>
-        <h3>12 de Noviembre de 2016</h3>
+    <div class="container">
         <br>
-        <a href="#about" class="btn btn-dark btn-lg">Encuentra más info</a>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6 text-center">
+                <h1 id="header_title">Patri & Quique</h1>
+                <h3 id="header_subtitle">12 de Noviembre de 2016</h3>
+                <br>
+                <a href="#about" class="btn btn-dark btn-lg">Encuenta más info</a>
+            </div>
+        </div>
     </div>
 </header>
 
-<!-- About -->
 <section id="about" class="about">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>¡Sí! ¡Nos casamos!</h2>
-                <p class="lead">Después de 8 años de relación, hemos descubierto que la combinación de un friki informático y
-                                una enfermera apasionada de la pastelería funciona muy bien, por lo que hemos decidido que nos casamos.</p>
-
-                <a href="#" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#confirmModal">
-                    Confirmar asistencia
-                </a>
-
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 text-center">
+                <blockquote>
+                    <p>
+                    Estoy convencida de que los mejores momentos llegan sin hacer tanto plan, y de que las buenas
+                    personas aparecen en tu vida de manera casual y espontánea, creo en las coincidencias, porque entre
+                    ellas te encontré a ti...
+                    </p>
+                </blockquote>
             </div>
+            <div class="col-lg-2"></div>
         </div>
+
+        <br>
+
+
+        <div class="row">
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-8 text-center">
+                <p style="font-size: 22px;">
+                    Nos encantaría que puedieras asistir a nuestra boda. Te consideramos una persona muy especial y
+                    queremos que estés con nosotros en este momento.
+                </p>
+            </div>
+
+            <div class="col-lg-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-8 text-center">
+                <a href="#" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#confirmModal">
+                    <strong>Confirma tu asistencia</strong>
+                </a>
+            </div>
+
+            <div class="col-lg-2"></div>
+        </div>
+
     </div>
 </section>
 
 <!-- Confirmar Asistencia -->
+<form action="/" method="POST">
 <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -43,18 +82,19 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Confirmar</button>
+                <button type="submit" class="btn btn-primary">Confirmar</button>
         </div>
     </div>
   </div>
 </div>
+</form>
 
-<!-- Services -->
 <section id="services" class="services main-color">
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
                 <div class="row">
+
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                             <span class="fa-stack fa-4x">
@@ -66,6 +106,7 @@
                             </h4>
                         </div>
                     </div>
+
                     <div class="col-md-3 col-sm-6">
                         <div class="service-item">
                             <span class="fa-stack fa-4x">
@@ -94,10 +135,10 @@
                         <div class="service-item">
                             <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x fa-bg"></i>
-                            <i class="fa fa-bus fa-stack-1x fa-color"></i>
+                            <i class="fa fa-taxi fa-stack-1x fa-color"></i>
                             </span>
                             <h4>
-                                <strong>El Transporte</strong>
+                                <a href="#el-transporte"><strong>El Transporte</strong></a>
                             </h4>
                         </div>
                     </div>
@@ -124,7 +165,15 @@
     <div class="container" >
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>La ceremonia se celebrará en el anfiteatro de Ses Cases de sa Font Seca a las 12:30h.</h2>
+                <p style="font-size: 22px;">
+                    El día comenzará con la celebración de la ceremonia en el anfiteatro de
+                    <strong>Ses Cases de Sa Font Seca</strong> a las <strong>12:30</strong> de la mañana.
+                    ¡Sed puntuales!
+                </p>
+                <p style="font-size: 22px">
+                    Después de la ceremonia, cuando hayamos salido del anfiteatro, encontraréis una caja llena de confeti
+                    que podréis emplear para tirarnos.
+                </p>
             </div>
         </div>
     </div>
@@ -143,7 +192,14 @@
     <div class="container" >
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>El banquete se celebrará...</h2>
+                <p style="font-size: 22px;">
+                    Junto a la pequeña fuente de la entrada tendrá lugar un aperitivo para ir entrando en hambre.
+                    También habrá algo de bebida, no queremos que nadie pase sed o tenga el vaso vacio.
+                </p>
+                <p style="font-size: 22px;">
+                    La comida se hará en el salón principal de la finca. Podréis encontrar donde sentaros en algún lugar
+                    donde habéis tomado el aperitivo.
+                </p>
             </div>
         </div>
     </div>
@@ -162,7 +218,9 @@
     <div class="container" >
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>La fiesta será en...</h2>
+                <p style="font-size: 22px;">
+                    La fiesta y la barra libre se harán en el mismo sitio que el banquete.
+                </p>
             </div>
         </div>
     </div>

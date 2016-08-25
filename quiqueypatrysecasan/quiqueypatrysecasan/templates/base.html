@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 {% load staticfiles %}
 <head>
 
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <title>Patri & Quique - 12 de Noviembre de 2016</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -20,9 +20,15 @@
     <!-- Super Custom CSS -->
     <link href="{% static 'css/personal.css' %}" rel="stylesheet">
 
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-image-gallery.min.css' %}">
+
     <!-- Custom Fonts -->
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Coming+Soon|Courgette|Dancing+Script|Gloria+Hallelujah|Poiret+One|Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Poiret-One|Lovers+Quarrel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Permanent+Marker|Great+Vibes|Bad+Script" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,22 +47,20 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+                <a href="#top"  onclick = $("#menu-close").click(); >Patri & Quique</a>
             </li>
             <li>
-                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+                {% if request.user.is_authenticated %} Bienvenido '{{ request.user.username }}'
+                {% else %} <a href="/admin">Login</a>{% endif %}
             </li>
             <li>
-                <a href="#about" onclick = $("#menu-close").click(); >About</a>
+                <a href="#la-ceremonia" onclick = $("#menu-close").click(); >La Ceremonia</a>
             </li>
             <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+                <a href="#el-banquete" onclick = $("#menu-close").click(); >El Banquete</a>
             </li>
             <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+                <a href="#la-fiesta" onclick = $("#menu-close").click(); >La Fiesta</a>
             </li>
         </ul>
     </nav>
@@ -99,6 +103,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="{% static 'js/bootstrap-image-gallery.min.js' %}"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
