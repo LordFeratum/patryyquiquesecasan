@@ -5,6 +5,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from web.models import Photo
 
+from django.views.generic import ListView
+
 from django.contrib.auth import authenticate
 
 from web.forms import UserForm
@@ -38,15 +40,24 @@ class Home(FormView):
         return super(Home, self).form_invalid(form)
 
 
-class Gallery(View):
-    def get(self, request):
-        images = Photo.objects.all()
+class Gallery(ListView):
+    template_name = "gallery.html"
+    model = Photo
 
-        context = {'form': PhotoForm(),
-                   'thumbmail': dict(crop="thumb", gravity="face"),
-                   'images': images}
+    def get_context_data(self, **kwargs):
+        context = super(Gallery, self).get_context_data(**kwargs)
+        context['thumbnail'] = { 'crop': "thumb", 'gravity': "face"}
+        context['form'] = PhotoForm()
+        return context
 
-        return render(request, 'gallery.html', context)
+#    def get(self, request):
+#        images = Photo.objects.all()
+#
+#        context = {'form': PhotoForm(),
+#                   'thumbmail': dict(crop="thumb", gravity="face")
+#                   'images': images}
+#
+#        return render(request, 'gallery.html', context)
 
     def post(self, request):
         form = PhotoForm(request.POST, request.FILES)
