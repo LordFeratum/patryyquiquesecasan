@@ -3,6 +3,7 @@ services:
 
   gunicorn:
     build: quiqueypatrysecasan
+    restart: always
     environment:
       DB_PASSWORD: moocheewae9Joh7lai0eJ0ohSheLee
       DB_USER: web
@@ -12,20 +13,23 @@ services:
 
   nginx:
     build: nginx
+    restart: always
     ports:
       - "8081:80"
 
   haproxy:
     build: haproxy
+    restart: always
     ports:
       - "80:80"
 
   redis:
     image: redis:3.2.3-alpine
+    restart: always
 
-  # https://hub.docker.com/_/postgres/
   postgres:
     image: postgres:9.5.4
+    restart: always
     volumes:
       - /var/lib/patriyquique_postgreslql/data:/var/lib/postgresql/data
     environment:
@@ -33,7 +37,3 @@ services:
       POSTGRES_USER: web
       POSTGRES_DB: quiqueypatry
 
-
-#ieDithiechadah7eiShan1oyahmeen
-#ukihu0akonieReghai0ieyaeFineex
-#ho8eeshaemeik4waiDizoGh8fe5Mei
