@@ -10,6 +10,7 @@ services:
       DB_NAME: quiqueypatry
       DB_HOST: postgres
       DEBUG: "False"
+      CLOUDINARY_URL: cloudinary://131131783311296:hYbwcfxv1reh3k8tn84OwcaqjCM@boda
 
   nginx:
     build: nginx
