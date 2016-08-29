@@ -14,3 +14,4 @@ CMD ["-c", "gunicorn_settings.py", "quiqueypatrysecasan.wsgi"]
 COPY . /code/
 
 RUN python manage.py collectstatic -c --no-input
+RUN python manage.py migrate

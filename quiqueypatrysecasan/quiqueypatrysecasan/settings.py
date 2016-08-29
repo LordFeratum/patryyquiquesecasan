@@ -86,6 +86,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'quiqueypatrysecasan.wsgi.application'
 
+print
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
