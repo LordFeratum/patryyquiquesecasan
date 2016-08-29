@@ -1,0 +1,39 @@
+version: "2"
+services:
+
+  gunicorn:
+    build: quiqueypatrysecasan
+    restart: always
+    environment:
+      DB_PASSWORD: moocheewae9Joh7lai0eJ0ohSheLee
+      DB_USER: web
+      DB_NAME: quiqueypatry
+      DB_HOST: postgres
+      DEBUG: "False"
+
+  nginx:
+    build: nginx
+    restart: always
+    ports:
+      - "8081:80"
+
+  haproxy:
+    build: haproxy
+    restart: always
+    ports:
+      - "80:80"
+
+  redis:
+    image: redis:3.2.3-alpine
+    restart: always
+
+  postgres:
+    image: postgres:9.5.4
+    restart: always
+    volumes:
+      - /var/lib/patriyquique_postgreslql/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: moocheewae9Joh7lai0eJ0ohSheLee
+      POSTGRES_USER: web
+      POSTGRES_DB: quiqueypatry
+
