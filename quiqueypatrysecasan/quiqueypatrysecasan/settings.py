@@ -86,8 +86,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'quiqueypatrysecasan.wsgi.application'
 
-print
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -97,6 +95,11 @@ DATABASES = {
         'PASSWORD': config("DB_PASSWORD", 'db_pwd'),
     }
 }
+
+print(DATABASES['default']['HOST'])
+print(DATABASES['default']['NAME'])
+print(DATABASES['default']['USER'])
+print(DATABASES['default']['PASSWORD'])
 
 
 # Password validation
