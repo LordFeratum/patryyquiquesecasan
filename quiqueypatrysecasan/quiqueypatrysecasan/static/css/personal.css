@@ -2,6 +2,44 @@
 PERSONAL CSS
 */
 
+body {
+    font-family: 'Poiret One', cursive;
+
+}
+
+#header_title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 65px;
+}
+
+#header_subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+}
+
+blockquote {
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 20px;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
 .main-color {
     color: #736C74;
     background-color: #F2E5E2;
@@ -26,6 +64,8 @@ PERSONAL CSS
 }
 
 .ceremonia {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22 px;
     display: table;
     width: 100%;
     height: 400px;
@@ -38,6 +78,8 @@ PERSONAL CSS
 }
 
 .banquete {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22 px;
     display: table;
     width: 100%;
     height: 400px;
@@ -50,6 +92,8 @@ PERSONAL CSS
 }
 
 .fiesta {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22 px;
     display: table;
     width: 100%;
     height: 400px;
@@ -62,6 +106,8 @@ PERSONAL CSS
 }
 
 .transporte {
+    font-family: 'Indie Flower', cursive;
+    font-size: 22 px;
     display: table;
     width: 100%;
     height: 400px;
