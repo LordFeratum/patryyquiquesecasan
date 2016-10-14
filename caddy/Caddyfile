@@ -1,0 +1,17 @@
+patriyquiquesecasan.com
+
+root /var/www/html
+
+log stdout
+errors stdout
+
+ext .html .htm .php
+
+tls {
+  key_type p384
+  protocols tls1.0 tls1.2
+}
+
+proxy / gunicorn:9000 {
+  transparent
+}

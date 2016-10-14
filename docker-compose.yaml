@@ -18,6 +18,16 @@ services:
     ports:
       - "8081:80"
 
+# nginx:
+#   image: nginx
+
+  caddy:
+    build: caddy
+    restart: always
+    ports:
+      - "8082:80"
+      - "443:443"
+
   haproxy:
     build: haproxy
     restart: always
